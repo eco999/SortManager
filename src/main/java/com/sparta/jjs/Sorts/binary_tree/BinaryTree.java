@@ -1,72 +1,21 @@
 package com.sparta.jjs.Sorts.binary_tree;
 
-public class BinaryTree {
-    //design decisions:
-    //public methods for helping
-    //private methods for using tree (hard work)
+public interface BinaryTree {
+    int getRootElement();
 
-    //hiding the nodes - elements are the numbers in the nodes
-    private final Node rootNode;
+    int getNumberOfElements();
 
-    //cant have a tree without a root node
-    public BinaryTree(int element){
-        this.rootNode = new Node(element);
-    }
+    void addElement(int element);
 
-    public void addElementToTree(int element){
-        addNodeToTree(rootNode, element);
-    }
+    void addElements(final int[] elements);
 
-    //add node to the tree
-    private void addNodeToTree(Node node, int element){
-        if(element < node.getValue()){ //I want to be left child
-            if(node.isLeftChildEmpty()){ //Is there room for me
-                node.setLeftChild(new Node(element)); //I am now the left child
-            }
-            else {
-                addNodeToTree(node.getLeftChild(), element);
-            }
-        }
-        else if(element > node.getValue()){
-            if(node.isRightChildEmpty()){
-                node.setRightChild(new Node(element));
-            }
-            else {
-                addNodeToTree(node.getRightChild(), element);
-            }
-        }
-    }
+    boolean findElement(int value);
 
-    public boolean findElement(int element)
-    {
-        Node node = findNode(element);
-        if (node != null)
-        {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
+    int getLeftChild(int element) throws ChildNotFoundException;
 
-    private Node findNode(int element)
-    {
-        Node node = rootNode;
-        while (node != null)
-        {
-            if (element == node.getValue())
-            {
-                return node;
-            }
-            if(element < node.getValue())
-            {
-                node = node.getLeftChild();
-            }
-            else if(element > node.getValue())
-            {
-                node = node.getRightChild();
-            }
-        }
-        return null;
-    }
+    int getRightChild(int element) throws ChildNotFoundException;
+
+    int[] getSortedTreeAsc();
+
+    int[] getSortedTreeDesc();
 }

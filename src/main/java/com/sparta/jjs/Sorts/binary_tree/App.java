@@ -2,7 +2,7 @@ package com.sparta.jjs.Sorts.binary_tree;
 
 public class App {
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree(5);
+        BinaryTreeSorter tree = new BinaryTreeSorter(5);
         tree.addElementToTree(6);
         tree.addElementToTree(10);
         tree.addElementToTree(11);
