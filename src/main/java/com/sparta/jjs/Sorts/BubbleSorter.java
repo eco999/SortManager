@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BubbleSorter
 {
-    public static int[] getBubbleSortedArray(int[] array)
+    public static int[] getSortedArray(int[] array)
     {
         //loop through entire array
         for (int i=0;i<array.length;i++)
@@ -24,21 +24,6 @@ public class BubbleSorter
             }
         }
         return array;
-    }
-
-    public static int[] getUserInputArray()
-    {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter array length: ");
-        int arrayLength = scanner.nextInt();
-        int[] unsortedList = new int[arrayLength];
-        for (int i = 0;i<arrayLength;i++)
-        {
-            System.out.println("Enter number to add to array: ");
-            unsortedList[i] = scanner.nextInt();
-        }
-        scanner.close();
-        return unsortedList;
     }
 
 }
