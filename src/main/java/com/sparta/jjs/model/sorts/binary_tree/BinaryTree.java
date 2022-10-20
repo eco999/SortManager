@@ -1,6 +1,8 @@
-package com.sparta.jjs.Sorts.binary_tree;
+package com.sparta.jjs.model.sorts.binary_tree;
 
-public interface BinaryTree {
+import com.sparta.jjs.model.sorts.Sortable;
+
+public interface BinaryTree extends Sortable{
     int getRootElement();
 
     int getNumberOfElements();

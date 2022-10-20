@@ -1,4 +1,4 @@
-package com.sparta.jjs.Sorts.binary_tree;
+package com.sparta.jjs.model.sorts.binary_tree;
 
 public class ChildNotFoundException extends Exception {
 }

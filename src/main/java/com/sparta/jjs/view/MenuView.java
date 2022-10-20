@@ -1,19 +1,16 @@
-package com.sparta.jjs;
+package com.sparta.jjs.view;
 
 
-import com.sparta.jjs.Sorts.InsertionSorter;
-import com.sparta.jjs.Sorts.MergeSorter;
-import com.sparta.jjs.Sorts.binary_tree.BinaryTreeSorter;
+import com.sparta.jjs.controller.SORTER_TYPES;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
-public class Menu {
+public class MenuView {
     static Scanner scanner = new Scanner(System.in);
 
 
-    public static void printMenu()
+    public void printSorts()
     {
         System.out.println(
                 "1. Bubblesort\n" +
@@ -23,39 +20,42 @@ public class Menu {
     }
 
 
-    public static int getUserInputArrayLength()
+    public int getUserInputArrayLength()
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length: ");
         int arrayLength = scanner.nextInt();
-        scanner.close();
+
         return arrayLength;
     }
 
-    public static int[] generateRandomArray(int arrayLength)
+
+    public SORTER_TYPES getAlgorithmInput()
     {
-        Random random = new Random();
-        int[] randomArray = new int[arrayLength];
-        for (int i = 0; i < randomArray.length; i++) {
-            randomArray[i] = random.nextInt(1000);
-        }
-        return randomArray;
+        printSorts();
+        return switch (scanner.nextInt()) {
+            case 1 -> SORTER_TYPES.BUBBLE;
+            case 2 -> SORTER_TYPES.MERGE;
+            case 3 -> SORTER_TYPES.BINARYTREE;
+            case 4 -> SORTER_TYPES.INSERTION;
+            default -> throw new IllegalStateException("Unexpected value: " + scanner.nextInt());
+        };
+
     }
 
-
-    private static int getAlgorithmInput()
+    public void displaySortedArray(int[] sortedArray)
     {
-        return scanner.nextInt();
+        System.out.println(Arrays.toString(sortedArray));
     }
 
-    public static void doMenu()
+    /*public void doMenu()
     {
-        printMenu();
+        printSorts();
         int algorithmChoice = getAlgorithmInput();
         int[] randomArray = generateRandomArray(getUserInputArrayLength());
         System.out.println("Random array generated: "+ Arrays.toString(randomArray));
         switch (algorithmChoice) {
-            case 1 -> System.out.println("Bubble sorted array: "+Arrays.toString(BinaryTreeSorter.getSortedArray(randomArray)));
+            case 1 -> System.out.println("Bubble sorted array: "+Arrays.toString(BubbleSorter.getSortedArray(randomArray)));
             case 2 -> System.out.println("Merge sorted array: "+Arrays.toString(MergeSorter.getSortedArray(randomArray)));
             case 3 -> {
                 BinaryTreeSorter bst = new BinaryTreeSorter(randomArray[0]);
@@ -64,6 +64,6 @@ public class Menu {
             }
             case 4 -> System.out.println("Insertion sorted array: "+Arrays.toString(InsertionSorter.getSortedArray(randomArray)));
         }
-    }
+    }*/
 
 }

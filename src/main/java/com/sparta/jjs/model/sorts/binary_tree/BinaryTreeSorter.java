@@ -1,4 +1,4 @@
-package com.sparta.jjs.Sorts.binary_tree;
+package com.sparta.jjs.model.sorts.binary_tree;
 
 import java.util.ArrayList;
 
@@ -16,9 +16,8 @@ public class BinaryTreeSorter implements BinaryTree{
         this.rootNode = new Node(element);
     }
 
-    public static int[] getSortedArray(int[] randomArray) {
-
-        return randomArray;
+    public int[] getSortedArray(int[] array) {
+        return SortInOrder();
     }
 
     @Override

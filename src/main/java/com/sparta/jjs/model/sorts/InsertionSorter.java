@@ -1,7 +1,14 @@
-package com.sparta.jjs.Sorts;
+package com.sparta.jjs.model.sorts;
 
-public class InsertionSorter {
-    public static int[] getSortedArray(int[] array) {
+public class InsertionSorter implements Sortable{
+
+
+    @Override
+    public int[] getSortedArray(int[] array) {
+        return getInsertionSortedArray(array);
+    }
+
+    private int[] getInsertionSortedArray(int[] array) {
         for(int i = 1; i < array.length;i++)
         {
             int value = array[i];

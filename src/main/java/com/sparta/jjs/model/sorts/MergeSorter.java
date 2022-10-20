@@ -1,10 +1,13 @@
-package com.sparta.jjs.Sorts;
+package com.sparta.jjs.model.sorts;
 
-import java.util.Arrays;
+public class MergeSorter implements Sortable{
 
-public class MergeSorter {
+    @Override
+    public int[] getSortedArray(int[] array) {
+        return getMergeSortedArray(array);
+    }
 
-    public static int[] getSortedArray(int[] array) {
+    private int[] getMergeSortedArray(int[] array) {
         //array length 0 or 1, nothing to sort, stopping condition
         if(array.length < 2){
             return array;
@@ -33,7 +36,7 @@ public class MergeSorter {
     }
 
 
-    public static int[] mergeArrays( int[] initialArray, int[] leftArray, int[] rightArray) {
+    private int[] mergeArrays( int[] initialArray, int[] leftArray, int[] rightArray) {
 
         //counter for left and right
         int leftSize = initialArray.length / 2;
@@ -59,5 +62,4 @@ public class MergeSorter {
         }
         return initialArray;
     }
-
 }
