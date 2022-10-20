@@ -1,11 +1,11 @@
 package com.sparta.jjs;
+
 import com.sparta.jjs.Sorts.binary_tree.BinaryTreeSorter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BubbleSorterTest
-{
+public class BinaryTreeSorterTest {
     @Test
     @DisplayName("Check that {2,0,-1,-2} returns {-2,-1,0,2}")
     void checkThatHighToLowReturnsLowToHigh()
@@ -33,5 +33,4 @@ public class BubbleSorterTest
     {
         Assertions.assertArrayEquals(new int[]{}, BinaryTreeSorter.getSortedArray(new int[]{}));
     }
-
 }

@@ -1,6 +1,9 @@
 package com.sparta.jjs.Sorts.binary_tree;
 
+import java.util.ArrayList;
+
 public class BinaryTreeSorter implements BinaryTree{
+
     //design decisions:
     //public methods for helping
     //private methods for using tree (hard work)
@@ -13,7 +16,9 @@ public class BinaryTreeSorter implements BinaryTree{
         this.rootNode = new Node(element);
     }
 
-    public static void getSortedArray(int[] randomArray) {
+    public static int[] getSortedArray(int[] randomArray) {
+
+        return randomArray;
     }
 
     @Override
@@ -52,23 +57,20 @@ public class BinaryTreeSorter implements BinaryTree{
 
     @Override
     public int getLeftChild(int element) throws ChildNotFoundException {
-        return 0;
+        return findNode(element).getLeftChild().getValue();
     }
 
     @Override
     public int getRightChild(int element) throws ChildNotFoundException {
-        return 0;
+        return findNode(element).getRightChild().getValue();
     }
 
     @Override
     public int[] getSortedTreeAsc() {
-        return new int[0];
+
+        return SortInOrder();
     }
 
-    @Override
-    public int[] getSortedTreeDesc() {
-        return new int[0];
-    }
 
     private Node findNode(int element)
     {
@@ -123,6 +125,82 @@ public class BinaryTreeSorter implements BinaryTree{
         }
     }
 
+    //display in order
+    public int[] SortInOrder()
+    {
+        ArrayList<Integer> tempList = new ArrayList<>();
+        int value = inOrder(rootNode,tempList);
+        if(value != -1)
+        {
+            tempList.add(value);
+        }
+        return tempList.stream().mapToInt(i -> i).toArray();
+
+    }
+
+    private int inOrder(Node tree, ArrayList<Integer> tempArray)
+    {
+        if (tree != null)
+        {
+            inOrder(tree.getLeftChild(),tempArray);
+            tempArray.add(tree.getValue());
+            inOrder(tree.getRightChild(),tempArray);
+        }
+        return -1;
+    }
+
+
+    public static class Node {
+        private final int value;
+        //Object type so can be null e.g. if no left child exists
+        private Node leftChild;
+        private Node rightChild;
+
+        public Node(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public Node getLeftChild() {
+            return leftChild;
+        }
+
+        public void setLeftChild(Node leftChild) {
+            this.leftChild = leftChild;
+        }
+
+        public Node getRightChild() {
+            return rightChild;
+        }
+
+        public void setRightChild(Node rightChild) {
+            this.rightChild = rightChild;
+        }
+
+        public boolean isLeftChildEmpty()
+        {
+            if (leftChild == null)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        public boolean isRightChildEmpty()
+        {
+            if(rightChild == null){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
 }
 
 

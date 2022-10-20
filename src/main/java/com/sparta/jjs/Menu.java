@@ -1,11 +1,11 @@
 package com.sparta.jjs;
 
 
-import com.sparta.jjs.Sorts.BubbleSorter;
 import com.sparta.jjs.Sorts.InsertionSorter;
 import com.sparta.jjs.Sorts.MergeSorter;
 import com.sparta.jjs.Sorts.binary_tree.BinaryTreeSorter;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -53,16 +53,16 @@ public class Menu {
         printMenu();
         int algorithmChoice = getAlgorithmInput();
         int[] randomArray = generateRandomArray(getUserInputArrayLength());
+        System.out.println("Random array generated: "+ Arrays.toString(randomArray));
         switch (algorithmChoice) {
-            case 1:
-                BubbleSorter.getSortedArray(randomArray);
-                break;
-            case 2:
-                MergeSorter.getSortedArray(randomArray);
-            case 3:
-                BinaryTreeSorter.getSortedArray(randomArray);
-            case 4:
-                InsertionSorter.getSortedArray(randomArray);
+            case 1 -> System.out.println("Bubble sorted array: "+Arrays.toString(BinaryTreeSorter.getSortedArray(randomArray)));
+            case 2 -> System.out.println("Merge sorted array: "+Arrays.toString(MergeSorter.getSortedArray(randomArray)));
+            case 3 -> {
+                BinaryTreeSorter bst = new BinaryTreeSorter(randomArray[0]);
+                bst.addElements(randomArray);
+                System.out.println(Arrays.toString(bst.SortInOrder()));
+            }
+            case 4 -> System.out.println("Insertion sorted array: "+Arrays.toString(InsertionSorter.getSortedArray(randomArray)));
         }
     }
 
