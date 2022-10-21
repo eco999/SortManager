@@ -47,27 +47,29 @@ public class MenuView {
         };
     }
 
+    public int getAlgorithmInputAmount()
+    {
+        System.out.println("Select how many algorithms you want to compare: ");
+        int input = scanner.nextInt();
+        while(input < 1)
+        {
+            System.out.println("Invalid input");
+            input = scanner.nextInt();
+        }
+        return input;
+    }
+
+    public void displayArray(int[] array, long timeTaken, SORTER_TYPES chosenSort)
+    {
+        System.out.println(chosenSort.toString()+" Sort");
+        System.out.println(Arrays.toString(array));
+        System.out.println("Time taken: "+timeTaken);
+    }
+
     public void displayArray(int[] array)
     {
         System.out.println(Arrays.toString(array));
     }
 
-    /*public void doMenu()
-    {
-        printSorts();
-        int algorithmChoice = getAlgorithmInput();
-        int[] randomArray = generateRandomArray(getUserInputArrayLength());
-        System.out.println("Random array generated: "+ Arrays.toString(randomArray));
-        switch (algorithmChoice) {
-            case 1 -> System.out.println("Bubble sorted array: "+Arrays.toString(BubbleSorter.getSortedArray(randomArray)));
-            case 2 -> System.out.println("Merge sorted array: "+Arrays.toString(MergeSorter.getSortedArray(randomArray)));
-            case 3 -> {
-                BinaryTreeSorter bst = new BinaryTreeSorter(randomArray[0]);
-                bst.addElements(randomArray);
-                System.out.println(Arrays.toString(bst.SortInOrder()));
-            }
-            case 4 -> System.out.println("Insertion sorted array: "+Arrays.toString(InsertionSorter.getSortedArray(randomArray)));
-        }
-    }*/
 
 }
