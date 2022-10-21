@@ -8,13 +8,13 @@ import com.sparta.jjs.model.sorts.Sortable;
 import com.sparta.jjs.model.sorts.binary_tree.BinaryTreeSorter;
 
 public class SortFactory {
-    public static Sortable getSorter(SORTER_TYPES sortType)
+    public static Sortable getSorter(SORTER_TYPES sortType, int[] randomArray)
     {
         return switch(sortType)
                 {
                     case BUBBLE -> new BubbleSorter();
                     case MERGE -> new MergeSorter();
-                    case BINARYTREE -> new BinaryTreeSorter(-1);
+                    case BINARYTREE -> new BinaryTreeSorter(randomArray[0]);
                     case INSERTION -> new InsertionSorter();
                 };
     }

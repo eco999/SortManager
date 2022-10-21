@@ -16,7 +16,10 @@ public class BinaryTreeSorter implements BinaryTree{
         this.rootNode = new Node(element);
     }
 
+
+
     public int[] getSortedArray(int[] array) {
+        addElements(array);
         return SortInOrder();
     }
 
@@ -129,6 +132,7 @@ public class BinaryTreeSorter implements BinaryTree{
     {
         ArrayList<Integer> tempList = new ArrayList<>();
         int value = inOrder(rootNode,tempList);
+
         if(value != -1)
         {
             tempList.add(value);

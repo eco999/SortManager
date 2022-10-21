@@ -18,7 +18,7 @@ public class MenuController {
     }
 
     private void returnSortedArrayToView(SORTER_TYPES chosenSort, int[] randomArray) {
-        Sortable sorter = SortFactory.getSorter(chosenSort);
+        Sortable sorter = SortFactory.getSorter(chosenSort,randomArray);
         int[] sortedArray = sorter.getSortedArray(randomArray);
         menuView.displaySortedArray(sortedArray);
     }
