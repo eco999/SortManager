@@ -54,11 +54,11 @@ public class MergeSorter implements Sortable{
 
     private int[] mergeArrays( int[] initialArray, int[] leftArray, int[] rightArray) {
 
-        logger.log(Level.INFO, "Method has started");
+        logger.log(Level.FINE, "Method has started");
         //counter for left and right
         int leftSize = initialArray.length / 2;
         int rightSize = initialArray.length - leftSize;
-        logger.log(Level.INFO,"Starting first while loop");
+        logger.log(Level.FINE,"Starting first while loop");
 
         //init counters
         int i = 0;
@@ -75,7 +75,7 @@ public class MergeSorter implements Sortable{
                 initialArray[k++] = rightArray[j++];
             }
         }
-        logger.log(Level.INFO,"Adding rest of items to initial array");
+        logger.log(Level.FINE,"Adding rest of items to initial array");
         while (i < leftSize) {
             initialArray[k++] = leftArray[i++];
         }

@@ -25,7 +25,7 @@ public class LoggerSingleton {
     private void initLogger()
     {
         logger = Logger.getLogger("sort-logger");
-        CustomLoggerConfiguration.configureLogger(logger, Level.INFO);
+        CustomLoggerConfiguration.configureLogger(logger, Level.OFF);
     }
 
 }

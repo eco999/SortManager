@@ -21,7 +21,8 @@ public class MenuView {
                 "1. Bubblesort\n" +
                 "2. Merge Sort\n" +
                 "3. Binary Tree Sort\n" +
-                "4. Insertion Sort");
+                "4. Insertion Sort\n" +
+                "\nChoose an algorithm: ");
     }
 
 
@@ -33,11 +34,11 @@ public class MenuView {
         int arrayLength = scanner.nextInt();;
         while (arrayLength < 1)
         {
-            logger.log(Level.FINER, "Invalid input from user: "+arrayLength);
+            logger.log(Level.INFO, "Invalid input from user: "+arrayLength);
             System.out.println("Invalid input");
             arrayLength = scanner.nextInt();
         }
-        logger.log(Level.INFO, "Valid input from user: "+arrayLength);
+        logger.log(Level.FINE, "Valid input from user: "+arrayLength);
         return arrayLength;
     }
 
@@ -61,23 +62,24 @@ public class MenuView {
         int input = scanner.nextInt();
         while(input < 1)
         {
-            logger.log(Level.FINER, "Invalid input from user: "+input);
+            logger.log(Level.INFO, "Invalid input from user: "+input);
             System.out.println("Invalid input");
             input = scanner.nextInt();
         }
-        logger.log(Level.INFO, "Valid input from user: "+input);
+        logger.log(Level.FINE, "Valid input from user: "+input);
         return input;
     }
 
     public void displayArray(int[] array, long timeTaken, SORTER_TYPES chosenSort)
     {
-        System.out.println(chosenSort.toString()+" Sort");
+        System.out.println(chosenSort.toString()+" Sort: ");
         System.out.println(Arrays.toString(array));
         System.out.println("Time taken: "+timeTaken);
     }
 
     public void displayArray(int[] array)
     {
+        System.out.println("Randomised array: ");
         System.out.println(Arrays.toString(array));
     }
 

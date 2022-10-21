@@ -100,7 +100,7 @@ public class BinaryTreeSorter implements BinaryTree{
         {
             if (element == node.getValue())
             {
-                logger.log(Level.INFO, "Found node: "+node.getValue());
+                logger.log(Level.FINE, "Found node: "+node.getValue());
                 return node;
             }
             if(element < node.getValue())
@@ -114,7 +114,7 @@ public class BinaryTreeSorter implements BinaryTree{
                 node = node.getRightChild();
             }
         }
-        logger.log(Level.INFO, "Node not found at all");
+        logger.log(Level.FINE, "Node not found at all");
         return null;
     }
 
@@ -122,7 +122,7 @@ public class BinaryTreeSorter implements BinaryTree{
     private void addNodeToTree(Node node, int element){
 
         if(element < node.getValue()){ //I want to be left child
-            logger.log(Level.INFO, "Element smaller than node");
+            logger.log(Level.FINE, "Element smaller than node");
             if(node.isLeftChildEmpty()){ //Is there room for me
                 logger.log(Level.FINER, "Adding new node at left child");
                 node.setLeftChild(new Node(element)); //I am now the left child
@@ -133,7 +133,7 @@ public class BinaryTreeSorter implements BinaryTree{
             }
         }
         else if(element > node.getValue()){
-            logger.log(Level.INFO, "Element larger than node");
+            logger.log(Level.FINE, "Element larger than node");
             if(node.isRightChildEmpty()){
                 logger.log(Level.FINER, "Adding new node at right child");
                 node.setRightChild(new Node(element));
@@ -165,7 +165,7 @@ public class BinaryTreeSorter implements BinaryTree{
 
         logger.log(Level.INFO,"Method started");
         ArrayList<Integer> tempList = new ArrayList<>();
-        logger.log(Level.INFO, "Getting sorted items");
+        logger.log(Level.FINE, "Getting sorted items");
         int value = returnInOrder(rootNode,tempList);
 
         if(value != -1)
@@ -189,7 +189,7 @@ public class BinaryTreeSorter implements BinaryTree{
             logger.log(Level.FINEST, "Recursive call to rightChild");
             returnInOrder(tree.getRightChild(),tempArray);
         }
-        logger.log(Level.WARNING, "Empty node, returning -1");
+        logger.log(Level.FINE, "Empty node, returning -1");
         return -1;
     }
 
@@ -216,7 +216,7 @@ public class BinaryTreeSorter implements BinaryTree{
             }
             return leftChild;*/
             try{
-                logger.log(Level.INFO, "Found leftChild");
+                logger.log(Level.FINE, "Found leftChild");
                 return leftChild;
             }catch (NullPointerException e)
             {
@@ -238,7 +238,7 @@ public class BinaryTreeSorter implements BinaryTree{
             return rightChild;*/
 
             try{
-                logger.log(Level.INFO, "Found leftChild");
+                logger.log(Level.FINE, "Found leftChild");
                 return rightChild;
             }catch (NullPointerException e)
             {
@@ -256,11 +256,11 @@ public class BinaryTreeSorter implements BinaryTree{
 
             if (leftChild == null)
             {
-                logger.log(Level.INFO, "leftChild Empty");
+                logger.log(Level.FINEST, "leftChild Empty");
                 return true;
             }
             else {
-                logger.log(Level.INFO, "leftChild not empty");
+                logger.log(Level.FINEST, "leftChild not empty");
                 return false;
             }
         }
@@ -269,11 +269,11 @@ public class BinaryTreeSorter implements BinaryTree{
         {
 
             if(rightChild == null){
-                logger.log(Level.INFO, "rightChild Empty");
+                logger.log(Level.FINEST, "rightChild Empty");
                 return true;
             }
             else {
-                logger.log(Level.INFO, "rightChild not empty");
+                logger.log(Level.FINEST, "rightChild not empty");
                 return false;
             }
         }

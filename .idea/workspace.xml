@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d9ab5a3-05ea-4856-baaf-574d8bd65445" name="Changes" comment="Import Logging package made earlier">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/utility/logging/LoggerSingleton.java" afterDir="false" />
+    <list default="true" id="9d9ab5a3-05ea-4856-baaf-574d8bd65445" name="Changes" comment="Logging for classes&#10;&#10;Singleton for Logger&#10;Fixed Logfile output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SortManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SortManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/SortFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/SortFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/BubbleSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/InsertionSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/InsertionSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/MergeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/MergeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/Sortable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/Sortable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTreeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTreeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/utility/logging/CustomFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/utility/logging/CustomFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/utility/logging/LoggerSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/utility/logging/LoggerSingleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/view/MenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/AlgorithmSpeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/AlgorithmSpeedTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,18 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Justin/Documents/Work/Code/SortManager/src/main/java/com/sparta/jjs/utility&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Justin/Documents/Work/Code/SortManager/src/main/java/com/sparta/jjs/utility",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Justin\Documents\Work\Code\SortManager\src\main\java\com\sparta\jjs\utility" />
@@ -159,7 +152,7 @@
       <workItem from="1666297989794" duration="9334000" />
       <workItem from="1666338182610" duration="22868000" />
       <workItem from="1666385345383" duration="3684000" />
-      <workItem from="1666389053126" duration="1555000" />
+      <workItem from="1666389053126" duration="3123000" />
     </task>
     <task id="LOCAL-00001" summary="All sorts completed">
       <created>1666273186813</created>
@@ -217,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666371884112</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Logging for classes&#10;&#10;Singleton for Logger&#10;Fixed Logfile output">
+      <created>1666390711811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666390711811</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +243,8 @@
     <MESSAGE value="Implemented speed test" />
     <MESSAGE value="User can input multiple algorithm choices with speed output" />
     <MESSAGE value="Import Logging package made earlier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Import Logging package made earlier" />
+    <MESSAGE value="Logging for classes&#10;&#10;Singleton for Logger&#10;Fixed Logfile output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logging for classes&#10;&#10;Singleton for Logger&#10;Fixed Logfile output" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
