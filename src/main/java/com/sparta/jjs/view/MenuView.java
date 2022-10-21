@@ -23,8 +23,13 @@ public class MenuView {
     public int getUserInputArrayLength()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter array length: ");
-        int arrayLength = scanner.nextInt();
+        System.out.println("Enter array length between 1 and 1000: ");
+        int arrayLength = scanner.nextInt();;
+        while (arrayLength < 1 || arrayLength > 1000)
+        {
+            System.out.println("Invalid input");
+            arrayLength = scanner.nextInt();
+        }
 
         return arrayLength;
     }
@@ -38,14 +43,13 @@ public class MenuView {
             case 2 -> SORTER_TYPES.MERGE;
             case 3 -> SORTER_TYPES.BINARYTREE;
             case 4 -> SORTER_TYPES.INSERTION;
-            default -> throw new IllegalStateException("Unexpected value: " + scanner.nextInt());
+            default -> getAlgorithmInput();
         };
-
     }
 
-    public void displaySortedArray(int[] sortedArray)
+    public void displayArray(int[] array)
     {
-        System.out.println(Arrays.toString(sortedArray));
+        System.out.println(Arrays.toString(array));
     }
 
     /*public void doMenu()

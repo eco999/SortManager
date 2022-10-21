@@ -131,7 +131,7 @@ public class BinaryTreeSorter implements BinaryTree{
     public int[] SortInOrder()
     {
         ArrayList<Integer> tempList = new ArrayList<>();
-        int value = inOrder(rootNode,tempList);
+        int value = returnInOrder(rootNode,tempList);
 
         if(value != -1)
         {
@@ -141,13 +141,13 @@ public class BinaryTreeSorter implements BinaryTree{
 
     }
 
-    private int inOrder(Node tree, ArrayList<Integer> tempArray)
+    private int returnInOrder(Node tree, ArrayList<Integer> tempArray)
     {
         if (tree != null)
         {
-            inOrder(tree.getLeftChild(),tempArray);
+            returnInOrder(tree.getLeftChild(),tempArray);
             tempArray.add(tree.getValue());
-            inOrder(tree.getRightChild(),tempArray);
+            returnInOrder(tree.getRightChild(),tempArray);
         }
         return -1;
     }
