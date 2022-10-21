@@ -30,9 +30,9 @@ public class BinaryTreeSorterTest {
     }
 
     @Test
-    @DisplayName("Check that empty array returns nothing")
-    void checkThatEmptyArrayReturnsNothing()
+    @DisplayName("Check that empty array returns root element")
+    void checkThatEmptyArrayReturnsRoot()
     {
-        Assertions.assertArrayEquals(new int[]{}, bst.getSortedArray(new int[]{}));
+        Assertions.assertArrayEquals(new int[]{bst.getRootElement()}, bst.getSortedArray(new int[]{}));
     }
 }

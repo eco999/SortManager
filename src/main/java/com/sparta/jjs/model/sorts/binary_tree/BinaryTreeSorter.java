@@ -20,7 +20,15 @@ public class BinaryTreeSorter implements BinaryTree{
 
     public int[] getSortedArray(int[] array) {
         addElements(array);
-        return SortInOrder();
+        array = SortInOrder();
+        if(array[0] == -1)
+        {
+            return null;
+        }
+        else
+        {
+            return array;
+        }
     }
 
     @Override

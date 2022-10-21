@@ -23,9 +23,9 @@ public class MenuView {
     public int getUserInputArrayLength()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter array length between 1 and 1000: ");
+        System.out.println("Enter array length: ");
         int arrayLength = scanner.nextInt();;
-        while (arrayLength < 1 || arrayLength > 1000)
+        while (arrayLength < 1)
         {
             System.out.println("Invalid input");
             arrayLength = scanner.nextInt();
