@@ -2,11 +2,16 @@ package com.sparta.jjs.view;
 
 
 import com.sparta.jjs.controller.SORTER_TYPES;
+import com.sparta.jjs.utility.logging.CustomLoggerConfiguration;
+import com.sparta.jjs.utility.logging.LoggerSingleton;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MenuView {
+    private static final Logger logger = LoggerSingleton.getSingleton().getLogger();
     static Scanner scanner = new Scanner(System.in);
 
 
@@ -22,15 +27,17 @@ public class MenuView {
 
     public int getUserInputArrayLength()
     {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length: ");
         int arrayLength = scanner.nextInt();;
         while (arrayLength < 1)
         {
+            logger.log(Level.FINER, "Invalid input from user: "+arrayLength);
             System.out.println("Invalid input");
             arrayLength = scanner.nextInt();
         }
-
+        logger.log(Level.INFO, "Valid input from user: "+arrayLength);
         return arrayLength;
     }
 
@@ -49,13 +56,16 @@ public class MenuView {
 
     public int getAlgorithmInputAmount()
     {
+
         System.out.println("Select how many algorithms you want to compare: ");
         int input = scanner.nextInt();
         while(input < 1)
         {
+            logger.log(Level.FINER, "Invalid input from user: "+input);
             System.out.println("Invalid input");
             input = scanner.nextInt();
         }
+        logger.log(Level.INFO, "Valid input from user: "+input);
         return input;
     }
 

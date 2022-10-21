@@ -1,6 +1,5 @@
 package com.sparta.jjs;
 
-import com.sparta.jjs.controller.SORTER_TYPES;
 import com.sparta.jjs.model.RandomArrayGenerator;
 import com.sparta.jjs.model.sorts.BubbleSorter;
 import com.sparta.jjs.model.sorts.InsertionSorter;
@@ -8,6 +7,8 @@ import com.sparta.jjs.model.sorts.MergeSorter;
 import com.sparta.jjs.model.sorts.Sortable;
 import com.sparta.jjs.model.sorts.binary_tree.BinaryTreeSorter;
 import org.junit.jupiter.api.Test;
+
+import java.util.logging.Logger;
 
 public class AlgorithmSpeedTest {
 
@@ -43,6 +44,7 @@ public class AlgorithmSpeedTest {
         long startTime = System.nanoTime();
         int[] sortedArray = sorter.getSortedArray(tempArray);
         long endTime = System.nanoTime();
+
         System.out.println("Time taken: "+ (endTime-startTime));
     }
 
