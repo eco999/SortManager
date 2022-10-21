@@ -46,7 +46,7 @@ Process finished with exit code 0
 - Merge Sort
 - Binary Tree Sort
 - Insertion Sort
-- Timing information to compare sort performance
+- Timing information (nanoseconds) to compare sort performance
 
 ## Running Tests
 
@@ -67,8 +67,8 @@ To run the tests, JUnit 5.9.0 is required. If using Maven, it can be imported in
 
 1. OOP concepts
 2. SOLID principles
-3. Interfaces
-4. JUnit testing
+3. JUnit testing
+4. Logger - to console and logfile
 5. Implemented multiple Design Patterns:
 - Factory Pattern
 - Singleton Pattern
