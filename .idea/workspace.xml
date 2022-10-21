@@ -4,27 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d9ab5a3-05ea-4856-baaf-574d8bd65445" name="Changes" comment="All sorts completed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SORTER_TYPES.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SortController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/RandomArrayGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/SortFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/BubbleSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/Sortable.java" afterDir="false" />
+    <list default="true" id="9d9ab5a3-05ea-4856-baaf-574d8bd65445" name="Changes" comment="Fixed a bug with BinaryTreeSorter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/view/MenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/InsertionSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/InsertionSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/MergeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/MergeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/binary_tree/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/binary_tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/binary_tree/BinaryTreeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTreeSorter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/Sorts/binary_tree/ChildNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/ChildNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/BinaryTreeSorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/BinaryTreeSorterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/BubbleSorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/BubbleSorterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/InsertionSorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/InsertionSorterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/MergeSorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/jjs/MergeSorterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SortManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/controller/SortController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTreeSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/BinaryTreeSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/ChildNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/jjs/model/sorts/binary_tree/ChildNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +139,8 @@
       <option name="presentableId" value="Default" />
       <updated>1666267838635</updated>
       <workItem from="1666267840929" duration="5832000" />
-      <workItem from="1666297989794" duration="7338000" />
+      <workItem from="1666297989794" duration="9334000" />
+      <workItem from="1666338182610" duration="1427000" />
     </task>
     <task id="LOCAL-00001" summary="All sorts completed">
       <created>1666273186813</created>
@@ -162,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666273186813</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="MVC and Factory design pattern implemented">
+      <created>1666307894557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666307894557</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed a bug with BinaryTreeSorter">
+      <created>1666338315438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666338315438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +182,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="All sorts completed&#10;Node has been made inner class of BinaryTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="All sorts completed&#10;Node has been made inner class of BinaryTree" />
+    <MESSAGE value="MVC and Factory design pattern implemented" />
+    <MESSAGE value="Fixed a bug with BinaryTreeSorter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug with BinaryTreeSorter" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

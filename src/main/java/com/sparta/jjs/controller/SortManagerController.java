@@ -5,11 +5,11 @@ import com.sparta.jjs.model.SortFactory;
 import com.sparta.jjs.model.sorts.Sortable;
 import com.sparta.jjs.view.MenuView;
 
-public class MenuController {
+public class SortManagerController {
 
     MenuView menuView = new MenuView();
 
-    public MenuController() {
+    public SortManagerController() {
         int arrayLength = menuView.getUserInputArrayLength();
         SORTER_TYPES chosenSort = menuView.getAlgorithmInput();
         int[] randomArray = RandomArrayGenerator.generateRandomArray(arrayLength);

@@ -167,16 +167,38 @@ public class BinaryTreeSorter implements BinaryTree{
             return value;
         }
 
-        public Node getLeftChild() {
-            return leftChild;
+        public Node getLeftChild() throws ChildNotFoundException{
+            /*if(leftChild == null)
+            {
+                throw new ChildNotFoundException();
+            }
+            return leftChild;*/
+            try{
+                return leftChild;
+            }catch (NullPointerException e)
+            {
+                throw new ChildNotFoundException();
+            }
+
         }
 
         public void setLeftChild(Node leftChild) {
             this.leftChild = leftChild;
         }
 
-        public Node getRightChild() {
-            return rightChild;
+        public Node getRightChild() throws ChildNotFoundException{
+            /*if(rightChild == null)
+            {
+                throw new ChildNotFoundException();
+            }
+            return rightChild;*/
+
+            try{
+                return rightChild;
+            }catch (NullPointerException e)
+            {
+                throw new ChildNotFoundException();
+            }
         }
 
         public void setRightChild(Node rightChild) {
